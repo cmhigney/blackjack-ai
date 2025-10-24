@@ -20,7 +20,7 @@ This project simulates a professional blackjack player using the Hi-Lo card coun
 pip install flask
 
 # Run the web application
-python bjapp.py
+python blackjackapp.py
 
 # Open browser to http://localhost:5000
 ```
@@ -84,7 +84,7 @@ This aligns with documented card counting performance in casino environments.
 ## Technical Implementation
 
 ### Backend (Python)
-- **Language:** Python 3.8+
+- **Language:** Python 3.13
 - **Framework:** Flask 3.0
 - **Architecture:** Object-oriented design with separation of concerns
 - **Key Classes:** `Card`, `Deck`, `Hand`, `CardCounter`, `BankrollManager`, `BasicStrategy`, `BlackjackGame`
@@ -104,13 +104,13 @@ This aligns with documented card counting performance in casino environments.
          │ HTTP Requests
          ▼
 ┌─────────────────┐
-│   Flask API     │ (bjapp.py)
+│   Flask API     │ (blackjackapp.py)
 │   RESTful       │
 └────────┬────────┘
          │ Function Calls
          ▼
 ┌─────────────────┐
-│  Game Engine    │ (cardcountingbj.py)
+│  Game Engine    │ (blackjackai.py)
 │  Card Counting  │
 │  Basic Strategy │
 └─────────────────┘
@@ -119,12 +119,11 @@ This aligns with documented card counting performance in casino environments.
 ## Project Structure
 
 ```
-blackjack-card-counting-ai/
-├── cardcountingbj.py      # Core game engine and algorithms
-├── bjapp.py               # Flask web server and API
-├── templates/
-│   └── index.html        # Frontend interface
-└── requirements_web.txt   # Python dependencies
+blackjack_python/
+├── blackjackai.py         # Core game engine and algorithms
+├── blackjackapp.py        # Flask web server and API
+└── templates/
+    └── index.html         # Frontend interface
 ```
 
 ## Learning Outcomes
@@ -159,8 +158,8 @@ blackjack-card-counting-ai/
 - **MDN Web Docs** - JavaScript async/await patterns
 - **Flask Documentation** - API design patterns
 - **GitHub repos** - Studied similar blackjack implementations for architecture ideas:
-  - [einaregilsson/blackjack](https://github.com/PrintName/BlackjackCardCounter) 
-  - [mGalarnyk/Card_Counting_BlackJack](https://github.com/seblau/BlackJack-Simulator)
+  - [PrintName/BlackjackCardCounter](https://github.com/PrintName/BlackjackCardCounter) 
+  - [seblau/BlackJack-Simulator](https://github.com/seblau/BlackJack-Simulator)
 
 ### Testing & Validation:
 - Verified basic strategy against published charts
@@ -192,6 +191,9 @@ blackjack-card-counting-ai/
 
 **Important:** This advantage only materializes over thousands of hands. Short-term results will show high variance. Professional card counters require substantial bankrolls to weather losing streaks.
 
+## Current Issue
+- The dealer's hand seems to not show when the AI player is sitting out (not betting). Working on a fix so the user can see the dealer's cards every hand.
+
 ## Legal & Ethical Considerations
 
 **Educational Purpose:** This project was created for learning probability theory and algorithm design.
@@ -207,6 +209,5 @@ MIT License - Free to use, modify, and distribute
 ## Contact
 
 Cameron Higney  
-Email: cmhigney@uri.edu, cmhigney@gmail.com 
+Email: cmhigney@uri.edu, cmhigney@gmail.com  
 University of Rhode Island - Computer Science
-
