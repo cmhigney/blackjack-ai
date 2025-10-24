@@ -6,6 +6,10 @@ A full-stack blackjack application that implements card counting to achieve posi
 
 This project simulates a professional blackjack player using the Hi-Lo card counting system, optimal basic strategy, and Wonging (selective play). The AI tracks deck composition, calculates true count, and adjusts betting strategy to gain an edge over the house.
 
+## Game Interface
+<img width="3397" height="1831" alt="image" src="https://github.com/user-attachments/assets/a18a607b-7b00-41bd-9ab4-35f36388fc0f" />
+
+
 **Key Features:**
 - Hi-Lo card counting system with true count conversion
 - Optimal basic strategy for all playing decisions
